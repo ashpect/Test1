@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: challenge
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: challenge
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: challenge
-          image: app:latest
+          image: challenge_ashpect:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 80
